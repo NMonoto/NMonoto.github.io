@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Portfolio of Your Name - A Symphony of Code and Creativity">
+    <meta name="description" content="Portfolio of Ntsatsi Monoto - A Symphony of Code and Creativity">
     <title>Ntsatsi Monoto - Professional Portfolio</title>
     <!-- Tailwind CSS -->
     <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
@@ -20,12 +20,27 @@
     <nav class="bg-white shadow-md fixed w-full z-10" id="navbar">
         <div class="container mx-auto flex justify-between items-center py-4 px-6">
             <a href="#" class="text-2xl font-bold text-gray-900">Ntsatsi Monoto</a>
-            <ul class="flex space-x-4">
+            <button class="md:hidden text-gray-900 text-3xl focus:outline-none" id="menu-toggle">
+                <i class="fas fa-bars"></i>
+            </button>
+            <ul class="hidden md:flex space-x-4" id="menu-items">
                 <li><a href="#about" class="hover:text-indigo-600">About</a></li>
                 <li><a href="#services" class="hover:text-indigo-600">Services</a></li>
                 <li><a href="#projects" class="hover:text-indigo-600">Creations</a></li>
                 <li><a href="#skills" class="hover:text-indigo-600">Skills</a></li>
+                <li><a href="#testimonials" class="hover:text-indigo-600">Testimonials</a></li>
                 <li><a href="#contact" class="hover:text-indigo-600">Contact</a></li>
+            </ul>
+        </div>
+        <!-- Mobile Menu -->
+        <div class="md:hidden bg-white shadow-md hidden" id="mobile-menu">
+            <ul class="space-y-4 p-4">
+                <li><a href="#about" class="block text-lg">About</a></li>
+                <li><a href="#services" class="block text-lg">Services</a></li>
+                <li><a href="#projects" class="block text-lg">Creations</a></li>
+                <li><a href="#skills" class="block text-lg">Skills</a></li>
+                <li><a href="#testimonials" class="block text-lg">Testimonials</a></li>
+                <li><a href="#contact" class="block text-lg">Contact</a></li>
             </ul>
         </div>
     </nav>
@@ -111,25 +126,21 @@
         <div class="container mx-auto text-center">
             <h2 class="text-3xl font-bold mb-6">Skills</h2>
 
-            <!-- Core Expertise -->
-            <div class="bg-white p-6 shadow-md rounded-lg mb-6">
+            <!-- Core Expertise and Additional Skills in One Centered Row Each -->
+            <div class="bg-white p-6 shadow-md rounded-lg">
                 <h3 class="text-xl font-semibold mb-4">Core Expertise</h3>
-                <div class="flex justify-around">
+                <div class="flex justify-center space-x-8 mb-6">
                     <div class="text-center">
                         <i class="fab fa-microsoft text-5xl text-blue-500"></i>
                         <h4 class="text-lg font-semibold mt-2">ASP.NET</h4>
                     </div>
                     <div class="text-center">
-                        <i class="fas fa-code text-5xl text-blue-400"></i>
-                        <h4 class="text-lg font-semibold mt-2">Blazor</h4>
-                    </div>
+                        <i class="fas fa-code text-5xl text-blue-400"></i> 
+                        <h4 class="text-lg font-semibold mt-2">Blazor</h4> 
+                    </div> 
                 </div>
-            </div>
-
-            <!-- Additional Skills -->
-            <div class="bg-white p-6 shadow-md rounded-lg">
                 <h3 class="text-xl font-semibold mb-4">Additional Skills</h3>
-                <div class="grid grid-cols-2 gap-4">
+                <div class="flex justify-center space-x-8">
                     <div class="text-center">
                         <i class="fab fa-html5 text-5xl text-orange-500"></i>
                         <h4 class="text-lg font-semibold mt-2">HTML</h4>
@@ -143,64 +154,88 @@
                         <h4 class="text-lg font-semibold mt-2">JavaScript</h4>
                     </div>
                     <div class="text-center">
-                        <i class="fas fa-database text-5xl text-indigo-600"></i> 
-                        <h4 class="text-lg font-semibold mt-2">SQL</h4> 
-                    </div> 
-                    <div class="text-center"> 
-                        <i class="fas fa-plug text-5xl text-gray-600"></i> 
-                        <h4 class="text-lg font-semibold mt-2">API Development</h4> 
-                    </div> 
-                </div> 
-            </div> 
-        </div> 
+                        <i class="fas fa-database text-5xl text-indigo-600"></i>
+                        <h4 class="text-lg font-semibold mt-2">SQL</h4>
+                    </div>
+                    <div class="text-center">
+                        <i class="fas fa-plug text-5xl text-gray-600"></i>
+                        <h4 class="text-lg font-semibold mt-2">API Development</h4>
+                    </div>
+                </div>
+            </div>
+        </div>
     </section>
-
+    
+    <!-- Testimonials Section -->
+    <section id="testimonials" class="py-16 bg-gray-100" data-aos="fade-up">
+        <div class="container mx-auto text-center">
+            <h2 class="text-3xl font-bold mb-6">Client Testimonials</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                <div class="bg-white shadow-md rounded-lg p-6">
+                    <p class="text-md italic">"This developer went above and beyond, crafting a product that exceeded every expectation. Their attention to detail and passion for excellence is unparalleled."</p>
+                    <h4 class="font-semibold mt-4">- John Doe, CEO</h4>
+                </div>
+                <div class="bg-white shadow-md rounded-lg p-6">
+                    <p class="text-md italic">"Efficient, professional, and creative. They turned our vision into reality, delivering a flawless solution that has greatly impacted our business."</p>
+                    <h4 class="font-semibold mt-4">- Jane Smith, CTO</h4>
+                </div>
+            </div>
+        </div>
+    </section>
+    
     <!-- Contact Section -->
-<section id="contact" class="py-16 bg-gray-100" data-aos="fade-up">
-    <div class="container mx-auto text-center">
-        <h2 class="text-3xl font-bold mb-6">Get in Touch</h2>
-        <p class="text-md text-gray-600 mb-8">Feel free to reach out to me for any inquiries or services. I'm always open to discussing exciting projects or potential collaborations.</p>
-        <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-            <div class="bg-white shadow-md rounded-lg p-6">
-                <i class="fas fa-phone-alt text-5xl text-indigo-600 mb-4"></i>
-                <h3 class="text-lg font-semibold">Phone</h3>
-                <p class="mt-2 text-gray-600">+266 56575635 | +27710695636</p>
-            </div>
-            <div class="bg-white shadow-md rounded-lg p-6">
-                <i class="fas fa-envelope text-5xl text-indigo-600 mb-4"></i>
-                <h3 class="text-lg font-semibold">Email</h3>
-                <p class="mt-2 text-gray-600">nmonoto@gmail.com</p>
-            </div>
-            <div class="bg-white shadow-md rounded-lg p-6">
-                <i class="fas fa-map-marker-alt text-5xl text-indigo-600 mb-4"></i>
-                <h3 class="text-lg font-semibold">Address</h3>
-                <p class="mt-2 text-gray-600">Maseru 100,Lesotho</p>
+    <section id="contact" class="py-16 bg-gray-100" data-aos="fade-up">
+        <div class="container mx-auto text-center">
+            <h2 class="text-3xl font-bold mb-6">Get in Touch</h2>
+            <p class="text-md text-gray-600 mb-8">Feel free to reach out to me for any inquiries or services. I'm always open to discussing exciting projects or potential collaborations.</p>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <div class="bg-white shadow-md rounded-lg p-6">
+                    <i class="fas fa-phone-alt text-5xl text-indigo-600 mb-4"></i>
+                    <h3 class="text-lg font-semibold">Phone</h3>
+                    <p class="mt-2 text-gray-600">+266 56575635 | +27710695636</p>
+                </div>
+                <div class="bg-white shadow-md rounded-lg p-6">
+                    <i class="fas fa-envelope text-5xl text-indigo-600 mb-4"></i>
+                    <h3 class="text-lg font-semibold">Email</h3>
+                    <p class="mt-2 text-gray-600">nmonoto@gmail.com</p>
+                </div>
+                <div class="bg-white shadow-md rounded-lg p-6">
+                    <i class="fas fa-map-marker-alt text-5xl text-indigo-600 mb-4"></i>
+                    <h3 class="text-lg font-semibold">Address</h3>
+                    <p class="mt-2 text-gray-600">Maseru 100, Lesotho</p>
+                </div>
             </div>
         </div>
-    </div>
-</section>
-
-<!-- Footer -->
-<footer class="bg-gray-800 text-white py-6">
-    <div class="container mx-auto text-center">
-        <p>&copy; 2024 Your Name. All rights reserved.</p>
-        <div class="mt-4 space-x-4">
-            <a href="https://github.com/yourprofile" class="hover:text-gray-400"><i class="fab fa-github"></i></a>
-            <a href="https://linkedin.com/in/yourprofile" class="hover:text-gray-400"><i class="fab fa-linkedin"></i></a>
+    </section>
+    
+    <!-- Footer -->
+    <footer class="bg-gray-800 text-white py-6">
+        <div class="container mx-auto text-center">
+            <p>&copy; 2024 Ntsatsi Monoto. All rights reserved.</p>
+            <div class="mt-4 space-x-4">
+                <a href="https://github.com/yourprofile" class="hover:text-gray-400"><i class="fab fa-github"></i></a>
+                <a href="https://linkedin.com/in/yourprofile" class="hover:text-gray-400"><i class="fab fa-linkedin"></i></a>
+            </div>
         </div>
-    </div>
-</footer>
-
-<!-- AOS JS for Animations -->
-<script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
-<script>
-    AOS.init();
-</script>
-<!-- GSAP for Advanced Animations -->
-<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.7.1/gsap.min.js"></script>
-<script>
-    gsap.from("#header-title", { duration: 1, opacity: 0, y: -50 });
-    gsap.from("#header-subtitle", { duration: 1, opacity: 0, y: 50, delay: 0.5 });
-</script>
-</body> 
-</html>
+    </footer>
+    
+    <!-- AOS JS for Animations -->
+    <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+    <script>
+        AOS.init();
+    </script>
+    <!-- GSAP for Advanced Animations -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.7.1/gsap.min.js"></script>
+    <script>
+        gsap.from("#header-title", { duration: 1, opacity: 0, y: -50 });
+        gsap.from("#header-subtitle", { duration: 1, opacity: 0, y: 50, delay: 0.5 });
+    </script>
+    <!-- Mobile Menu Script -->
+    <script>
+        document.getElementById('menu-toggle').addEventListener('click', function() {
+            const mobileMenu = document.getElementById('mobile-menu');
+            mobileMenu.classList.toggle('hidden');
+        });
+    </script>
+    </body> 
+    </html>
