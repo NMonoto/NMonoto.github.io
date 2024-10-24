@@ -1,89 +1,43 @@
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-  font-family: sans-serif;
+/* Custom Styles for Poetic Portfolio */
+body {
+    font-family: 'Arial', sans-serif;
+    line-height: 1.6;
 }
 
-.container {
-  width: 1000px;
-  margin-left: auto;
-  margin-right: auto;
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 30px;
+h1, h2, h3 {
+    font-weight: bold;
 }
 
 header {
-  background-color: rgb(241, 245, 248);
-  text-align: center;
-  padding: 10px;
-  /* color: rgb(86, 84, 84); */
-  grid-column: 1/-1;
-  border-radius: 12px;
+    height: 90vh;
+    background-size: cover;
+    background-position: center;
 }
 
-.profile {
-  background-color: rgb(241, 245, 248);
-  border-radius: 12px;
-}
-.personal-details {
-  background-color: rgb(241, 245, 248);
-  height: 300px;
-  border-radius: 12px;
+#navbar ul li a {
+    transition: color 0.3s ease;
 }
 
-article {
-  background-color: rgb(241, 245, 248);
-  height: 300px;
-  border-radius: 12px;
-  padding: 20px 50px;
+#navbar ul li a:hover {
+    color: #6366f1; /* Tailwind Indigo */
 }
 
-.type {
-  background-color: rgb(241, 245, 248);
-  border-radius: 12px;
-  padding: 20px 50px;
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  gap: 10px;
-}
-footer {
-  padding: 10px;
-  color: rgb(86, 84, 84);
-  background-color: rgb(241, 245, 248);
-  grid-column: 1/-1;
-  border-radius: 12px;
-}
-.row {
-  display: grid;
-  gap: 3px;
-  grid-column: 1/-1;
-  grid-template-columns: 1fr 2fr;
+section {
+    padding: 2rem 0;
 }
 
-img {
-  border-radius: 62px;
-  margin: auto;
-  padding: 20px;
+section h2 {
+    margin-bottom: 1.5rem;
 }
 
-h2 {
-  /* padding: 0 50px; */
-  /* margin-top: 90px; */
-}
-.post-content {
-  /* padding: 0 50px; */
-}
-ul {
-  /* list-style: none; */
+.testimonial-carousel {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
 }
 
-h2,
-h3 {
-  margin-bottom: 32px;
-}
-
-li {
-  margin-bottom: 12px;
+@media (min-width: 768px) {
+    .testimonial-carousel {
+        grid-template-columns: repeat(2, 1fr);
+    }
 }
