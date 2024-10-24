@@ -33,7 +33,7 @@
             </ul>
         </div>
         <!-- Mobile Menu -->
-        <div class="md:hidden bg-white shadow-md hidden" id="mobile-menu">
+        <div class="md:hidden bg-white shadow-md hidden transition-all duration-300 ease-in-out" id="mobile-menu">
             <ul class="space-y-4 p-4">
                 <li><a href="#about" class="block text-lg">About</a></li>
                 <li><a href="#services" class="block text-lg">Services</a></li>
@@ -121,6 +121,23 @@
         </div>
     </section>
 
+    <!-- Testimonials Section (Placed just after Projects) -->
+    <section id="testimonials" class="py-16 bg-gray-100" data-aos="fade-up">
+        <div class="container mx-auto text-center">
+            <h2 class="text-3xl font-bold mb-6">Client Testimonials</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                <div class="bg-white shadow-md rounded-lg p-6">
+                    <p class="text-md italic">"This developer went above and beyond, crafting a product that exceeded every expectation. Their attention to detail and passion for excellence is unparalleled."</p>
+                    <h4 class="font-semibold mt-4">- John Doe, CEO</h4>
+                </div>
+                <div class="bg-white shadow-md rounded-lg p-6">
+                    <p class="text-md italic">"Efficient, professional, and creative. They turned our vision into reality, delivering a flawless solution that has greatly impacted our business."</p>
+                    <h4 class="font-semibold mt-4">- Jane Smith, CTO</h4>
+                </div>
+            </div>
+        </div>
+    </section>
+
     <!-- Skills Section -->
     <section id="skills" class="py-16 bg-gray-100" data-aos="fade-up">
         <div class="container mx-auto text-center">
@@ -128,18 +145,19 @@
 
             <!-- Core Expertise and Additional Skills in One Centered Row Each -->
             <div class="bg-white p-6 shadow-md rounded-lg">
-                <h3 class="text-xl font-semibold mb-4">Core Expertise</h3>
-                <div class="flex justify-center space-x-8 mb-6">
+                <h3 class="text-xl font-semibold mb-4 text-indigo-600">Core Expertise</h3>
+                <div class="flex justify-center space-x-8 mb-12">
                     <div class="text-center">
                         <i class="fab fa-microsoft text-5xl text-blue-500"></i>
                         <h4 class="text-lg font-semibold mt-2">ASP.NET</h4>
                     </div>
                     <div class="text-center">
-                        <i class="fas fa-code text-5xl text-blue-400"></i> 
-                        <h4 class="text-lg font-semibold mt-2">Blazor</h4> 
-                    </div> 
+                        <i class="fas fa-code text-5xl text-blue-400"></i>
+                        <h4 class="text-lg font-semibold mt-2">Blazor</h4>
+                    </div>
                 </div>
-                <h3 class="text-xl font-semibold mb-4">Additional Skills</h3>
+
+                <h3 class="text-xl font-semibold mb-4 text-gray-700">Additional Skills</h3>
                 <div class="flex justify-center space-x-8">
                     <div class="text-center">
                         <i class="fab fa-html5 text-5xl text-orange-500"></i>
@@ -165,24 +183,7 @@
             </div>
         </div>
     </section>
-    
-    <!-- Testimonials Section -->
-    <section id="testimonials" class="py-16 bg-gray-100" data-aos="fade-up">
-        <div class="container mx-auto text-center">
-            <h2 class="text-3xl font-bold mb-6">Client Testimonials</h2>
-            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
-                <div class="bg-white shadow-md rounded-lg p-6">
-                    <p class="text-md italic">"This developer went above and beyond, crafting a product that exceeded every expectation. Their attention to detail and passion for excellence is unparalleled."</p>
-                    <h4 class="font-semibold mt-4">- John Doe, CEO</h4>
-                </div>
-                <div class="bg-white shadow-md rounded-lg p-6">
-                    <p class="text-md italic">"Efficient, professional, and creative. They turned our vision into reality, delivering a flawless solution that has greatly impacted our business."</p>
-                    <h4 class="font-semibold mt-4">- Jane Smith, CTO</h4>
-                </div>
-            </div>
-        </div>
-    </section>
-    
+
     <!-- Contact Section -->
     <section id="contact" class="py-16 bg-gray-100" data-aos="fade-up">
         <div class="container mx-auto text-center">
@@ -207,7 +208,7 @@
             </div>
         </div>
     </section>
-    
+
     <!-- Footer -->
     <footer class="bg-gray-800 text-white py-6">
         <div class="container mx-auto text-center">
@@ -218,7 +219,7 @@
             </div>
         </div>
     </footer>
-    
+
     <!-- AOS JS for Animations -->
     <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
     <script>
@@ -236,6 +237,12 @@
             const mobileMenu = document.getElementById('mobile-menu');
             mobileMenu.classList.toggle('hidden');
         });
+
+        document.querySelectorAll('#mobile-menu a').forEach(link => {
+            link.addEventListener('click', function() {
+                document.getElementById('mobile-menu').classList.add('hidden');
+            });
+        });
     </script>
-    </body> 
-    </html>
+</body>
+</html>
